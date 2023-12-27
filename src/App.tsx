@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import AddTaskForm from './AddTaskForm';
 import Task from './Task';
+import './App.css';
 
 interface TaskItem {
   id: string;
@@ -27,7 +28,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className='app'>
       <AddTaskForm onAddTask={handleAddTask} />
       {tasks.map(task => (
         <Task key={task.id} id={task.id} text={task.text} onDeleteTask={handleDeleteTask} />

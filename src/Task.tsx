@@ -12,9 +12,9 @@ const Task: React.FC<TaskProps> = ({ id, text, onDeleteTask }) => {
   };
 
   return (
-    <div>
+    <div className='task'>
       <span>{text}</span>
-      <button onClick={handleDelete}>Удалить</button>
+      <button className='delete' onClick={handleDelete}>Удалить</button>
     </div>
   );
 };
